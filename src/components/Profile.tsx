@@ -1,10 +1,10 @@
 import React from 'react';
-import './Profile.css';
+import s from './Profile.module.css';
 
 
 export function Profile() {
     return (
-        <div className='content'>
+        <div className={s.content}>
             <div>
                 <img
                     src="https://p.bigstockphoto.com/eIdTXLbqQilMs9xbjvcs_bigstock-Aerial-View-Of-Sandy-Beach-Wit-256330393.jpg"
@@ -18,11 +18,11 @@ export function Profile() {
                 <div>
                     New Post
                 </div>
-                <div className='posts'>
-                    <div className={'item'}>
+                <div className={s.posts}>
+                    <div className={s.item}>
                         Post1
                     </div>
-                    <div className={'item'}>
+                    <div className={s.item}>
                         Post2
                     </div>
                 </div>
