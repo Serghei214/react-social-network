@@ -11,8 +11,6 @@ function App() {
             <Header />
             <Navbar />
             <Profile />
-            <Navbar />
-
 
         </div>
     );
