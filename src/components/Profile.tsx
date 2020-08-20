@@ -1,4 +1,6 @@
 import React from 'react';
+import './Profile.css';
+
 
 export function Profile() {
     return (
@@ -16,11 +18,11 @@ export function Profile() {
                 <div>
                     New Post
                 </div>
-                <div>
-                    <div>
+                <div className='posts'>
+                    <div className={'item'}>
                         Post1
                     </div>
-                    <div>
+                    <div className={'item'}>
                         Post2
                     </div>
                 </div>
