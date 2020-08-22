@@ -1,17 +1,18 @@
 import React from 'react';
 import './App.css';
-import {Navbar} from './components/Navbar';
-import {Header} from './components/Header';
-import {Profile} from './components/Profile';
-import {setFlagsFromString} from "v8";
+import {Navbar} from './components/Navbar/Navbar';
+import {Header} from './components/Header/Header';
+import {Dialogs} from './components/Dialogs/Dialogs';
 
 function App() {
     return (
         <div className='app-wrapper'>
-            <Header />
-            <Navbar />
-            <Profile />
-
+            <Header/>
+            <Navbar/>
+            <div className={'app-wrapper-content'}>
+                <Dialogs/>
+            </div>
+            {/*<Profile/>*/}
         </div>
     );
 }
