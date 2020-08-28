@@ -5,10 +5,14 @@ import {Post} from './Post/Post';
 export function MyPosts() {
     return (
 
-        <div>
+        <div className={s.postsBlock}>
+            <h3>MyPosts</h3>
             <div>
-                <textarea></textarea>
-                <button>Add post</button>
+                <div><textarea></textarea></div>
+
+                <div>
+                    <button>Add post</button>
+                </div>
             </div>
 
             <div className={s.posts}>

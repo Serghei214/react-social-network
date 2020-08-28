@@ -16,7 +16,7 @@ function App() {
                 <Header/>
                 <Navbar/>
                 <div className={'app-wrapper-content'}>
-                    <Route path='/dialogs' component={Dialogs}/>
+                    <Route path='/dialogs' component={Dialogs}/> {/*exact if we want the link to be exact, not dialogs/bla...*/}
                     <Route path='/profile' component={Profile}/>
                     <Route path='/news' component={News}/>
                     <Route path='/music' component={Music}/>
