@@ -2,9 +2,25 @@ import React from 'react';
 import s from './MyPosts.module.css';
 import {Post} from './Post/Post';
 
-export function MyPosts() {
-    return (
 
+type MyPostsType = {
+    id: number
+    message: string
+    likesCount: number
+}
+
+export function MyPosts() {
+
+    let posts = [
+        {id: 1, message: 'Hi, how are you?', likesCount: 12},
+        {id: 2, message: 'It\'s my first post', likesCount: 11},
+        {id: 3, message: 'Blala', likesCount: 11},
+        {id: 4, message: 'Dada', likesCount: 11}
+    ];
+
+    let postsElements = posts.map( post => <Post message={post.message} likesCount={post.likesCount}/>)
+
+    return (
         <div className={s.postsBlock}>
             <h3>MyPosts</h3>
             <div>
@@ -16,9 +32,7 @@ export function MyPosts() {
             </div>
 
             <div className={s.posts}>
-                <Post message='Hi, how are you?' likesCount={15}/>
-                <Post message="It's my first post" likesCount={20}/>
-
+                {postsElements}
             </div>
         </div>
     );
