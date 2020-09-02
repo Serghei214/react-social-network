@@ -1,24 +1,22 @@
 import React from 'react';
 import s from './MyPosts.module.css';
 import {Post} from './Post/Post';
+import {OneDialogType, OneMessageType} from '../../Dialogs/Dialogs';
 
 
-type MyPostsType = {
+export type MyPostsType = {
     id: number
     message: string
     likesCount: number
 }
 
-export function MyPosts() {
+export type PropsType = {
+    posts: Array<MyPostsType>
+}
 
-    let posts = [
-        {id: 1, message: 'Hi, how are you?', likesCount: 12},
-        {id: 2, message: 'It\'s my first post', likesCount: 11},
-        {id: 3, message: 'Blala', likesCount: 11},
-        {id: 4, message: 'Dada', likesCount: 11}
-    ];
+export function MyPosts(props: PropsType) {
 
-    let postsElements = posts.map( post => <Post message={post.message} likesCount={post.likesCount}/>)
+    let postsElements = props.posts.map( post => <Post message={post.message} likesCount={post.likesCount}/>)
 
     return (
         <div className={s.postsBlock}>
